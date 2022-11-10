@@ -22,27 +22,36 @@
   }
 </style>
 <script>
-window.addEventListener('load', () => {
-    const camera = document.querySelector('[camera]');
-    const marker = document.querySelector('a-nft');
-    let check;
+// window.addEventListener('load', () => {
+//     const camera = document.querySelector('[camera]');
+//     const marker = document.querySelector('a-nft');
+//     let check;
 
-    marker.addEventListener('markerFound', () => {
-        let cameraPosition = camera.object3D.position;
-        let markerPosition = marker.object3D.position;
-        let distance = cameraPosition.distanceTo(markerPosition)
+//     marker.addEventListener('markerFound', () => {
+//         let cameraPosition = camera.object3D.position;
+//         let markerPosition = marker.object3D.position;
+//         let distance = cameraPosition.distanceTo(markerPosition)
 
-        check = setInterval(() => {
-            cameraPosition = camera.object3D.position;
-            markerPosition = marker.object3D.position;
-            distance = cameraPosition.distanceTo(markerPosition)
+//         check = setInterval(() => {
+//             cameraPosition = camera.object3D.position;
+//             markerPosition = marker.object3D.position;
+//             distance = cameraPosition.distanceTo(markerPosition)
 
-            // do what you want with the distance:
-            alert(distance);
-        }, 100);
-    });
+//             // do what you want with the distance:
+//             alert(distance);
+//         }, 100);
+//     });
                            
-                           
+     window.onload = function () {
+      document
+        .querySelector(".content")
+        .addEventListener("click", function () {
+          // here you can change also a-scene or a-entity properties, like
+          // changing your 3D model source, size, position and so on
+          // or you can just open links, trigger actions...
+          alert("Hi there!");
+        });
+    };                      
                            
 </script>
 
@@ -77,6 +86,7 @@ window.addEventListener('load', () => {
         gltf-model="./assets/magnemite/scene.gltf"
         scale="10 10 10"
         position="0 0 0"
+                    class="content"
       >
       </a-entity>
     </a-nft>
