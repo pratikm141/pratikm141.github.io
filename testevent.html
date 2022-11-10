@@ -43,7 +43,10 @@
 //         }, 100);
 //     });
                            
-//      window.onload = function () {
+     window.onload = function () {
+       alert("Hello 1");
+       marker = document.querySelector(".content");
+       alert(marker);
 //       document
 //         .querySelector(".content")
 //         .addEventListener("click", function () {
@@ -52,7 +55,7 @@
 //           // or you can just open links, trigger actions...
 //           alert("Hi there!");
 //         });
-//     };  
+    };  
   
   AFRAME.registerComponent("clicking", {
         init: function() {
@@ -73,7 +76,7 @@
 <body style="margin : 0px; overflow: hidden;">
   <!-- minimal loader shown until image descriptors are loaded -->
   <div class="arjs-loader">
-    <div>Test 8 Loading, please wait...</div>
+    <div>Test 9 Loading, please wait...</div>
   </div>
   <a-scene
     vr-mode-ui="enabled: false;"
@@ -102,6 +105,7 @@
         gltf-model="./assets/magnemite/scene.gltf"
         scale="10 10 10"
         position="0 0 0"
+        class = "content"
       >
       </a-entity>
     </a-nft>
