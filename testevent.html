@@ -26,7 +26,8 @@
     init: function () {
       this.el.sceneEl.addEventListener('markerFound', () => {
         // redirect to custom URL
-        window.location = 'https://github.com/AR-js-org/AR.js';
+//         window.location = 'https://github.com/AR-js-org/AR.js';
+          alert('found');
       });
   });
   },
@@ -35,7 +36,7 @@
 <body style="margin : 0px; overflow: hidden;">
   <!-- minimal loader shown until image descriptors are loaded -->
   <div class="arjs-loader">
-    <div>Test Loading, please wait...</div>
+    <div>Test 2 Loading, please wait...</div>
   </div>
   <a-scene
     vr-mode-ui="enabled: false;"
