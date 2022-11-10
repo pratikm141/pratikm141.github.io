@@ -47,6 +47,9 @@
        alert("Hello 1");
        marker = document.querySelector(".content");
        alert(marker);
+       marker.onload = function(){
+         alert("Hello click");
+       };
 //       document
 //         .querySelector(".content")
 //         .addEventListener("click", function () {
